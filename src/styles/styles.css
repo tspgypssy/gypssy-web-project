@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+  @apply text-[0]
+}
+
+/* Cutomizing daisy */
+.tab {
+  @apply h-auto text-palette-5;
+}
+.tab-lifted {
+  @apply text-xxs;
+}
+.tabs {
+  @apply border-palette-7 border-b-2
+}
+.tab-active {
+  @apply font-normal text-palette-1 border-b-2 border-palette-1;
+}
+
+.collapse-arrow .collapse-title:after {
+  top: 0.25rem;
+}
+
+/* Customizing daisy end */
+
+.text-shadow-logo {
+  text-shadow: 0px 0px 8px #3271D7;
+}
+
+/* Tree-view */
+ul.tree-view {
+  @apply p-0 m-0 list-none relative;
+}
+li.tree-view-tree {
+  @apply list-none border-l border-palette-5 ml-4;
+}
+li.tree-view-tree div {
+  @apply relative pl-8;
+}
+li.tree-view-tree div:first-child::before {
+  content: '';
+  @apply border border-palette-5 border-t-0 border-r-0 w-4 absolute top-0 -left-px bottom-1/2;
+}
+ul.tree-view > li.tree-view-tree:last-child {
+  @apply border-l border-transparent
+}
+
+.tree-view-topic-item:last-child > p {
+  @apply !pb-3;
+}
+
+/* Tree view end */
+
+
+/* Autogrow textarea */
+
+.autogrow-wrapper {
+  /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+  display: grid;
+}
+.autogrow-wrapper::after {
+  /* Note the weird space! Needed to preventy jumpy behavior */
+  content: attr(data-replicated-value) " ";
+
+  /* This is how textarea text behaves */
+  white-space: pre-wrap;
+
+  /* Hidden from view, clicks, and screen readers */
+  visibility: hidden;
+}
+.autogrow-wrapper > textarea {
+  /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+  resize: none;
+
+  /* Firefox shows scrollbar on growth, you can hide like this. */
+  overflow: hidden;
+}
+.autogrow-wrapper > textarea,
+.autogrow-wrapper::after {
+  /* Identical styling required!! */
+  padding: 0.5rem;
+  font: inherit;
+
+  /* Place on top of each other */
+  grid-area: 1 / 1 / 2 / 2;
+}
+/* Autogrow textarea end */
+
+/* Helper */
+.snackbar-custom {
+  @apply bg-palette-7 text-palette-3 !font-medium !px-10 !py-1 !fixed !bottom-5 !right-10 border-l-4 border-green-500;
+}
+
+
+
+ 
+  /* For desktop: */
+  @media only screen and (min-width: 1024px){
+    .custom-modal-top {
+      align-items: start !important;
+    }
+    }
+ 
+
+.custom-break-anywhere
+{
+  overflow-wrap: anywhere;
+}
+.background-gradient
+{
+  background: linear-gradient(90deg, #8AB8B6 8.1%, #D76DD6 48.93%, #FFAF7B 93.29%);
+box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.24);
+border-radius: 24px 0px 0px 24px;
+}
+
+.appMobile
+{
+  border-radius: 1rem !important;
+}
+
+video::-webkit-media-controls {
+  display: none;
+}

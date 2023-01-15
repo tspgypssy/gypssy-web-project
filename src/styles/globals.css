@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 1024px){
+.custom-modal-top {
+  align-items: start !important;
+}
+}
+
+.visibleForScroll {
+  opacity: 1;
+  height: auto;
+}
+
+.hiddenForScroll {
+  transition: visibility 0s, opacity 0.5s linear;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  
+}
+
+.ProseMirror:focus-visible
+{
+  outline:none !important;
+}
+.ProseMirror-focused
+{
+  outline:none !important;
+}
+
+.ProseMirror p.is-editor-empty:first-child:before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+#toastrSuccess
+{
+  background: rgba(74, 153, 233, 0.5);
+backdrop-filter: blur(84px);
+}
+
+.fontFamily
+{
+  font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
+}
+
+/* make scrollbar transparent */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; 
+} 
+
+.custom-break-anywhere
+{
+  overflow-wrap: anywhere;
+}
+.background-gradient
+{
+  background: linear-gradient(90deg, #8AB8B6 8.1%, #D76DD6 48.93%, #FFAF7B 93.29%);
+box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.24);
+border-radius: 24px 0px 0px 24px;
+}
+
+/* .tooltip.tooltip-open:before, .tooltip.tooltip-open:after, .tooltip:hover:before, .tooltip:hover:after {
+  background-color: #2D2D2D;
+  padding: 5px
+} */
+
+.tooltip-color {
+  --tooltip-color:  #2D2D2D;
+}
+
+.tab-active
+{
+  color:#2F73FF;
+  border-bottom :2px solid #2F73FF;
+  border-color: #2F73FF !important;
+}
+
+.tab-active-mobile
+{
+  color:white;
+  border-bottom :2px solid #2F73FF;
+  border-color: #2F73FF !important;
+}
+
+.tab-not-active
+{
+  color:#6E767D;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.collapseCheckbox
+{
+  padding:0px !important;
+}
+
+.collapse-title, .collapse > input[type="checkbox"]
+{
+  min-height:2rem;
+}
+
+.appMobile
+{
+  border-radius: 1rem !important;
+}
+
+::-webkit-resizer {
+  display: none;
+}
+
+.tooltip
+{
+  z-index:60;
+}
+
+
+
+.tooltip-main-color
+{
+  color: #2B2B2B !important;
+}
+
+.setupMobileUL {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  margin-top: 1rem;
+  overflow-x: scroll;
+}
+.setupMobileUL li {
+  padding: 0 1rem 0 0;
+}
+.setupMobileUL li div.card {
+  border-radius: 9px;
+  height: 90px;
+  width: 160px;
+}
+.loginPara
+{background: linear-gradient(233.73deg, #C71C9F -115.42%, #FFAA12 76.4%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.react-calendar
+{
+  border: 1px solid #EBEBEB !important;
+  border-radius: 0.5rem !important;
+  width:100% !important;
+}
+
+.react-calendar__tile--active {
+  background: #000000 !important;
+  color: white;
+}
+
+.mulcolorDiv
+{
+  background: linear-gradient(to bottom, #F0BDD5 80%, white 20%);
+}
+
+.mulcolorDiv iframe
+{
+  border-radius:12px;
+}
+
+video::-webkit-media-controls {
+  display: none;
+}
+
+.mulcolorDivPhrase
+{
+  background: linear-gradient(to bottom, white 60%, #FCFAF8 40%);
+}
+
+
+.loginPage1
+{
+  background:linear-gradient(181.36deg, rgba(252, 172, 177, 0) 8.28%, #FDAEB3 25.9%);
+}
+
+.loginPage2
+{
+  background:linear-gradient(181.36deg, rgba(144, 141, 144, 0) 8.28%, #939194 23.04%);
+}
+
+.loginPage3
+{
+  background:linear-gradient(181.36deg, rgba(246, 240, 235, 0) 8.28%, #F6F0EB 25.9%);
+
+}
+
+.card2 {
+  flex: 0 0 auto;
+}
+
+.light-green-bg
+{
+  background: linear-gradient(0deg, rgba(59, 185, 94, 0.03), rgba(59, 185, 94, 0.03)), #FFFFFF;
+}

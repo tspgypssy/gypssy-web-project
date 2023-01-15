@@ -1,0 +1,31 @@
+.inputClass:focus-within ~ label,
+.inputClass:not(:placeholder-shown) ~ label {
+   display:block;
+  @apply transform scale-75 -translate-y-6;
+
+  
+  
+}
+
+.inputClass:focus-within ~ .inputCustomLabel {
+  @apply text-blue-500 !important;;
+  
+}
+
+.inputCustomLabel
+{
+    display:none;   
+}
+.inputLabel
+{
+  display:none;
+} 
+
+.inputClass:focus::placeholder {
+  color: transparent;
+}
+
+.inputClass:focus
+{
+  /* margin-bottom:-3%; */
+}

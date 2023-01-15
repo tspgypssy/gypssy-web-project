@@ -1,0 +1,71 @@
+{
+    "ipcMode": null,
+    "executionRoleArn": "arn:aws:iam::846120067161:role/OdinStack-SocialTaskDefinitionExecutionRole45D060E-4CV6ZEACPB9K",
+    "containerDefinitions": [
+      {
+        "dnsSearchDomains": [],
+        "environmentFiles": [],
+        "logConfiguration": null,
+        "entryPoint": [],
+        "portMappings": [
+          {
+            "hostPort": 0,
+            "protocol": "tcp",
+            "containerPort": 3000
+          }
+        ],
+        "command": [],
+        "linuxParameters": null,
+        "cpu": 1,
+        "environment": [
+          {
+            "name": "ENV",
+            "value": "development"
+          }
+        ],
+        "resourceRequirements": null,
+        "ulimits": [],
+        "dnsServers": [],
+        "mountPoints": [],
+        "workingDirectory": null,
+        "secrets": [],
+        "dockerSecurityOptions": [],
+        "memory": 256,
+        "memoryReservation": null,
+        "volumesFrom": [],
+        "stopTimeout": null,
+        "image": "846120067161.dkr.ecr.us-east-2.amazonaws.com/quark-social:dev-latest",
+        "startTimeout": null,
+        "firelensConfiguration": null,
+        "dependsOn": null,
+        "disableNetworking": null,
+        "interactive": null,
+        "healthCheck": null,
+        "essential": true,
+        "links": [],
+        "hostname": null,
+        "extraHosts": [],
+        "pseudoTerminal": null,
+        "user": null,
+        "readonlyRootFilesystem": null,
+        "dockerLabels": {},
+        "systemControls": [],
+        "privileged": null,
+        "name": "StagingSocialContainer"
+      }
+    ],
+    "placementConstraints": [],
+    "memory": null,
+    "taskRoleArn": "arn:aws:iam::846120067161:role/OdinStack-SocialTaskDefinitionTaskRole4B0C9615-2K0Z0ND37TBB",
+    "family": "OdinStackSocialTaskDefinition1C563A1F",
+    "pidMode": null,
+    "requiresCompatibilities": [
+      "EC2"
+    ],
+    "networkMode": "bridge",
+    "runtimePlatform": null,
+    "cpu": null,
+    "inferenceAccelerators": null,
+    "proxyConfiguration": null,
+    "volumes": []
+  }
