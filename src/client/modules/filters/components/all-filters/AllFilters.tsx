@@ -1,12 +1,12 @@
 import { useState, useEffect,useCallback } from "react";
 import { useRouter } from "next/router";
 import { CrossModal } from "icons/CrossModal";
-import { DatesFilter } from "./DatesFilter";
-import { DestinationsFilter } from "./DestinationsFilter";
-import { GroupTypeFilter } from "./GroupTypeFilter";
-import { TripFocusFilter } from "./TripFocusFilter";
-import { AgeFilter } from "./AgeFilter";
-import { BudgetFilter } from "./BudgetFilter";
+import { DatesFilter } from "../DatesFilter";
+import { DestinationsFilter } from "../DestinationsFilter";
+import { GroupTypeFilter } from "../GroupTypeFilter";
+import { TripFocusFilter } from "../TripFocusFilter";
+import { AgeFilter } from "../AgeFilter";
+import { BudgetFilter } from "../BudgetFilter";
 
 
 export const AllFilters = () => {
