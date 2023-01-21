@@ -1,5 +1,9 @@
 
 import { LandingPage } from "client/modules/landingpage/components/LandingPage";
+import { BusienessRegistrationModal } from "client/modules/settings/components/BusienessRegistrationModal";
+import { BusinessDocuments } from "client/modules/settings/components/BusinessDocuments";
+import { EditProfile } from "client/modules/settings/components/EditProfile";
+import { PaymentAndPayouts } from "client/modules/settings/components/PaymentAndPayouts";
 import { Settings } from "client/modules/settings/components/Settings";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
@@ -31,8 +35,12 @@ const Home = () => {
           images: [{ url: seo.image }],
         }}
       />
-    
-      <Settings></Settings>
+     
+    {/*  <Settings></Settings> */}
+    {/* <EditProfile></EditProfile> */}
+    {/* <PaymentAndPayouts></PaymentAndPayouts> */}
+       <BusinessDocuments></BusinessDocuments>
+       {modal === "business-registration" && <BusienessRegistrationModal />}
     </>
    
   );
