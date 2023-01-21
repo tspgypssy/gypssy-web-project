@@ -13,7 +13,7 @@ export const Header = () => {
             <p className="inline-block">Become a host</p>
             <p className="inline-block px-8">Become a trip leader</p>
             <div className="flex items-center border border-super-lighter-grey rounded-[100px] px-4 py-1">
-                <img src="images/dummy-user.png"></img>  
+                <img src="/images/dummy-user.png"></img>  
                 <DropDownNoCircle className="ml-4"></DropDownNoCircle>
             </div>
        </div>

@@ -52,7 +52,7 @@ module.exports = {
           'greenlight':'#14C063',
           'light-black':'#181818',
           'hover-tag':"#2D2D2D",
-          'text-light-green':"#DBEEBB",
+          'text-light-green':"#3C8826",
           'text-light-pink':"#EEBBEE",
           'text-light-blue':"#355DFF",
           'text-light-red':"#EEBBBB",
@@ -110,7 +110,8 @@ module.exports = {
           'text-light-blk':'#B2B2B2',
           'lighter-grey':'#EBEBEB',
           'text-grey':'#3BB95E',
-          'bg-light-white':'#FAFAFA'
+          'bg-light-white':'#FAFAFA',
+          'gyp-red':'#ED1D24'
         },
         screens: {
           

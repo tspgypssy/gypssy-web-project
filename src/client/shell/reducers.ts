@@ -3,13 +3,11 @@ import { combineReducers } from '@reduxjs/toolkit'
 // import storage from 'redux-persist/lib/storage';
 
 import commonReducers from '../common/reducer';
-import dashboardReducers from '../modules/dashboard/reducer';
 import loginReducers from '../modules/login/reducer';
 import landingPageReducers from '../modules/landingpage/reducer';
 
 const appReducer = combineReducers({
   common: commonReducers,
-  dashboard:dashboardReducers,
   login:loginReducers,
   landingpage:landingPageReducers,
 });

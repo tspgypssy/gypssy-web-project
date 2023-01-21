@@ -236,3 +236,110 @@ video::-webkit-media-controls {
 {
   background: linear-gradient(0deg, rgba(59, 185, 94, 0.03), rgba(59, 185, 94, 0.03)), #FFFFFF;
 }
+
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #EBEBEB;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -6px;
+}
+
+/* Container around content */
+.timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  right: -10px;
+  background-color: white;
+  border: 4px solid #EBEBEB;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.timeline-left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.timeline-right {
+  left: 50%;
+}
+
+/* Fix the circle for containers on the right side */
+.timeline-right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.timeline-content {
+  padding-top: 0px ;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .timeline-container {
+  width: 100%;
+  padding-left: 60px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .timeline-container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .timeline-left::after, .timeline-right::after {
+  left: 22px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .timeline-right {
+  left: 0%;
+  }
+ 
+  .tripBoxShadow
+  {
+    box-shadow: 0px 15px 92px rgba(0, 0, 0, 0.07), 0px 1.87823px 11.5198px rgba(0, 0, 0, 0.035);
+  }
+
+  .bgRed{
+    background: linear-gradient(0deg, rgba(237, 29, 36, 0.03), rgba(237, 29, 36, 0.03)), #FFFFFF;
+  }

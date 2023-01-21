@@ -23,9 +23,9 @@ export const LoginPage = () => {
   return (
    
     <div className="  ">
-        {/* <EnterMobileNumber></EnterMobileNumber> */}
+        <EnterMobileNumber></EnterMobileNumber>
         {/* <EnterOTPNumber></EnterOTPNumber> */}
-        <CreateProfile></CreateProfile>
+        {/* <CreateProfile></CreateProfile> */}
     </div>
    
   );
