@@ -2,18 +2,15 @@
 import { Footer } from 'client/modules/header/components/Footer';
 import { Header } from 'client/modules/header/components/Header';
 import { BackArrowPage } from 'icons/BackArrowPage';
-import { DownArrow } from 'icons/DownArrow';
-import { DownloadIcon } from 'icons/DownloadIcon';
-import { PlusIcon } from 'icons/PlusIcon';
-import { Tick } from 'icons/Tick';
-import { UnChecked } from 'icons/UnChecked';
+import { useRouter } from 'next/router';
 
 import React, { useCallback, useRef, useState } from 'react'
-import { WhatsappIcon } from 'react-share';
+import { ExpenseSection } from './manage-trip/ExpenseSection';
 import { GypssySection } from './manage-trip/GypssySection';
 import { OutsideSection } from './manage-trip/OutsideSection';
 import { ParticipantSection } from './manage-trip/ParticipantSection';
 import { PayoutDetails } from './manage-trip/PayoutDetails';
+import { EditTripModal } from './manage-trip/popup/EditTripModal';
 import { TransactionDetails } from './manage-trip/TransactionDetails';
 import { TripDetailsSection } from './manage-trip/TripDetailsSection';
 import { WhatsappSection } from './manage-trip/WhatsappSection';
@@ -21,6 +18,8 @@ import { WhatsappSection } from './manage-trip/WhatsappSection';
 
 export const ManageTrip = () => {
 
+  const router = useRouter();
+  const { modal } = router.query;
     
   return (
    
@@ -48,8 +47,11 @@ export const ManageTrip = () => {
             <PayoutDetails></PayoutDetails>
             <ParticipantSection></ParticipantSection>
             <OutsideSection></OutsideSection>
+            <ExpenseSection></ExpenseSection>
           </div>
           <Footer></Footer>
+
+          {modal === "edit-trip" && <EditTripModal />}
     </div>
    
   );

@@ -85,7 +85,7 @@ export const GuestTripDetails = ({showCal,setShowCal}) => {
                      <p className="text-xs opacity-60 float-right ml-auto">0/200</p>  
                   </div>          
                 </div>                                                        
-        </div>
+          </div>
        </div> 
 
        <div className="my-12">

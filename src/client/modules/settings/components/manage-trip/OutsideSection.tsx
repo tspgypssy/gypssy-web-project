@@ -15,7 +15,7 @@ export const OutsideSection = () => {
     
   return (
    <>
-   <p className="my-6 font-semibold text-lg">OutsideSection</p>
+   <p className="my-6 font-semibold text-lg">Outside</p>
 
     <div className="grid grid-cols-4 gap-3 w-full">
         <div className="bg-super-bg-light-white rounded-lg p-5" >
