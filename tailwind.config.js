@@ -102,16 +102,19 @@ module.exports = {
           'color-secondary-light2':'#263959',
           'color-light-grey':'#73686B',
           'border-light-blue':'#82A9CC',
-          'light-text-grey':'#808191',
+          'light-text-greeen':'#808191',
           'light-dash-pink':'#FCFAF8',
           'light-brown':'#391400',
           'light-border-blk':'#DFE9FB',
           'caramel':'#FFF0E5',
           'text-light-blk':'#B2B2B2',
           'lighter-grey':'#EBEBEB',
-          'text-grey':'#3BB95E',
+          'text-green':'#3BB95E',
           'bg-light-white':'#FAFAFA',
-          'gyp-red':'#ED1D24'
+          'gyp-red':'#ED1D24',
+          'gyp-green':'#3A9B14',
+          'gyp-yellow':'#FF8A00',
+          'gyp-grey':'#fafafa'
         },
         screens: {
           

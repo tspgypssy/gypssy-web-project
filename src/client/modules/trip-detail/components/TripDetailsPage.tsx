@@ -14,9 +14,9 @@ export const TripDetailsPage = () => {
    
     <div className="bg-white  ">
           <Header></Header>
-          {/* <TripDetails></TripDetails> */}
+          <TripDetails></TripDetails>
 
-          <ConfirmTripDetails></ConfirmTripDetails>
+          {/* <ConfirmTripDetails></ConfirmTripDetails> */}
          
     </div>
    

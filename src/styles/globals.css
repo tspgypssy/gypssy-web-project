@@ -343,3 +343,199 @@ video::-webkit-media-controls {
   .bgRed{
     background: linear-gradient(0deg, rgba(237, 29, 36, 0.03), rgba(237, 29, 36, 0.03)), #FFFFFF;
   }
+
+  /* The actual timeline (the vertical ruler) */
+.timeline-done {
+  position: relative;
+ 
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline-done::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #3BB95E;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -6px;
+}
+
+/* Container around content */
+.timeline-container-done {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-container-done::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  right: -10px;
+  background-color: white;
+  border: 4px solid #3BB95E;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.timeline-left-done {
+  left: 0;
+}
+
+/* Place the container to the right */
+.timeline-right-done {
+  left: 50%;
+}
+
+/* Fix the circle for containers on the right side */
+.timeline-right-done::after {
+  left: -16px;
+}
+
+/* The actual content */
+.timeline-content-done {
+  padding-top: 0px ;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+
+  /* Place the timelime to the left */
+  .timeline-done::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .timeline-container-done {
+  width: 100%;
+  padding-left: 60px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .timeline-container-done::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .timeline-left-done::after, .timeline-right-done::after {
+  left: 22px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .timeline-right-done {
+  left: 0%;
+  }
+
+  /* start */
+
+   /* The actual timeline (the vertical ruler) */
+.timeline-start {
+  position: relative;
+  
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline-start::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #EBEBEB;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -6px;
+}
+
+/* Container around content */
+.timeline-container-start {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-container-start::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  right: -10px;
+  background-color: white;
+  border: 4px solid #EBEBEB;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.timeline-left-start {
+  left: 0;
+}
+
+/* Place the container to the right */
+.timeline-right-start {
+  left: 50%;
+}
+
+/* Fix the circle for containers on the right side */
+.timeline-right-start::after {
+  left: -16px;
+}
+
+/* The actual content */
+.timeline-content-start {
+  padding-top: 0px ;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+
+  /* Place the timelime to the left */
+  .timeline-start::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .timeline-container-start {
+  width: 100%;
+  padding-left: 60px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .timeline-container-start::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .timeline-left-start::after, .timeline-right-start::after {
+  left: 22px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .timeline-right-start {
+  left: 0%;
+  }
+  .par-border
+  {
+    border: 1px solid rgba(58, 155, 20, 0.06);
+  }

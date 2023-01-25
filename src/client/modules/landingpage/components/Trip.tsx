@@ -30,7 +30,7 @@ export const Trip = () => {
                 <p className="ml-2 rounded px-3 py-2 bg-super-lighter-grey ">
                    18+
                 </p>
-                <p className="ml-auto text-super-text-grey px-[12px] py-[6px] border rounded-[100px] border-super-text-grey light-green-bg light-green-bg ">
+                <p className="ml-auto text-super-text-green px-[12px] py-[6px] border rounded-[100px] border-super-text-green light-green-bg light-green-bg ">
                   2 slots left
                 </p>
            </div>

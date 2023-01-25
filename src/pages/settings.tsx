@@ -3,6 +3,7 @@ import { LandingPage } from "client/modules/landingpage/components/LandingPage";
 import { BusienessRegistrationModal } from "client/modules/settings/components/BusienessRegistrationModal";
 import { BusinessDocuments } from "client/modules/settings/components/BusinessDocuments";
 import { EditProfile } from "client/modules/settings/components/EditProfile";
+import { ManageTrip } from "client/modules/settings/components/ManageTrip";
 import { PaymentAndPayouts } from "client/modules/settings/components/PaymentAndPayouts";
 import { Settings } from "client/modules/settings/components/Settings";
 import { NextSeo } from "next-seo";
@@ -39,7 +40,8 @@ const Home = () => {
     {/*  <Settings></Settings> */}
     {/* <EditProfile></EditProfile> */}
     {/* <PaymentAndPayouts></PaymentAndPayouts> */}
-       <BusinessDocuments></BusinessDocuments>
+       {/* <BusinessDocuments></BusinessDocuments> */}
+       <ManageTrip></ManageTrip>
        {modal === "business-registration" && <BusienessRegistrationModal />}
     </>
    
