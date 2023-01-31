@@ -2,9 +2,9 @@ export const Share = ({ ...props }) => {
   return (
 
 <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" { ...props }>
-<rect x="1" y="1" width="36" height="36" rx="18" fill="black" fill-opacity="0.8"/>
+<rect x="1" y="1" width="36" height="36" rx="18" fill="black" fillOpacity="0.8"/>
 <path d="M17.3333 11.5V13.1667H13.1667V24.8333H24.8333V20.6667H26.5V25.6667C26.5 25.8877 26.4122 26.0996 26.2559 26.2559C26.0996 26.4122 25.8877 26.5 25.6667 26.5H12.3333C12.1123 26.5 11.9004 26.4122 11.7441 26.2559C11.5878 26.0996 11.5 25.8877 11.5 25.6667V12.3333C11.5 12.1123 11.5878 11.9004 11.7441 11.7441C11.9004 11.5878 12.1123 11.5 12.3333 11.5H17.3333ZM23.655 13.1667H19.8333V11.5H26.5V18.1667H24.8333V14.345L19 20.1783L17.8217 19L23.655 13.1667Z" fill="white"/>
-<rect x="0.5" y="0.5" width="37" height="37" rx="18.5" stroke="white" stroke-opacity="0.08"/>
+<rect x="0.5" y="0.5" width="37" height="37" rx="18.5" stroke="white" strokeOpacity="0.08"/>
 </svg>
 
   );
