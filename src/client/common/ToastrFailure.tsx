@@ -3,10 +3,7 @@ import  {  RootState } from "client/shell/store";
 import { useSelector } from 'react-redux';
 import { useEffect } from "react";
 import actionList from "client/shell/actions";
-import { TickCircle } from "icons/TickCircle";
-import { TickCircleWhite } from "icons/TickCircleWhite";
-import { Cross } from "icons/Cross";
-import { BlueTrash } from "icons/BlueTrash";
+
 
 export const ToastrFailure = () => {
 

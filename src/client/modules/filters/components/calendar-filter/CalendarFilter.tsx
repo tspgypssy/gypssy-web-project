@@ -7,11 +7,13 @@ import { DatesFilter } from "../DatesFilter";
 
 export const CalendarFilter = () => {
     const router = useRouter();
-    const [showCal,setShowCal] = useState(false); 
+    const [showFromCal,setShowFromCal] = useState(false); 
+    const [showToCal,setShowToCal] = useState(false); 
 
     const setFalse =() =>
     {
-      setShowCal(false)
+      setShowFromCal(false);
+      setShowToCal(false);
     }
 
      const handleClose = () => {
@@ -27,14 +29,17 @@ export const CalendarFilter = () => {
       
 
 return (
-      <>
-      <div onClick={setFalse} className="w-full p-5 pb-0">
+      <div onClick={setFalse}>
+      <div  className="w-full p-5 pb-0">
             <div className="w-full flex items-center">
               <CrossModal onClick={handleClose} className="cursor-pointer ml-auto"></CrossModal>
             </div>
             
             <div className="h-[400px] overflow-y-auto">
-               <DatesFilter showCal={showCal} setShowCal={setShowCal}></DatesFilter>
+               <DatesFilter 
+                   showFromCal={showFromCal} setShowFromCal={setShowFromCal}
+                   showToCal={showToCal} setShowToCal={setShowToCal}
+               ></DatesFilter>
             </div>
            
            
@@ -44,6 +49,6 @@ return (
       <p onClick={handleClose} className="cursor-pointer underline font-semibold">Cancel</p>
       <p className="cursor-pointer text-white bg-black px-8 py-2.5 font-semibold rounded-[100px] ml-auto">Apply</p>
       </div>
-      </>
+      </div>
 )
 }

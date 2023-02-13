@@ -1,7 +1,11 @@
 
 import { LandingPage } from "client/modules/landingpage/components/LandingPage";
+import actionList from "client/shell/actions";
+import { RootState } from "client/shell/store";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
  
 const NEXT_PUBLIC_WEB_BASE_URL = process.env.NEXT_PUBLIC_WEB_BASE_URL;
 
@@ -17,6 +21,15 @@ const Home = () => {
 
   const router = useRouter();
   const { modal } = router.query;
+  const accessTokenExpired:string = useSelector((state: RootState) => state.login.accessTokenExpired);
+
+  useEffect(() => {
+   
+    if(accessTokenExpired && localStorage.getItem("refreshJwt") != null)
+    {
+      actionList.updateAccessToken({"grant_type":"refresh_token","refresh_token":localStorage.getItem("refreshJwt")});
+    }
+  }, [accessTokenExpired]);
 
 
   return (

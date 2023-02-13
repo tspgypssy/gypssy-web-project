@@ -1,7 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const defaultState = {
-   accessToken:  ""
+   accessToken:  "",
+   phoneNumber:"",
+   pageSel:"create-profile",
+   image:null,
+  imageSrc:null,
+  accessTokenExpired:false
 };
 
 
@@ -11,14 +16,37 @@ const commonReducer = createSlice({
   initialState: defaultState,
   reducers: {
      
-    loadedVerfiedUser: (state, action) => {
+    updateSelectedImagePage: (state, action) => {
       return {
         ...state,
-        accessToken: action.payload?.verfiyUserResponse?.accessToken
+        image: action.payload.image,
+        imageSrc: action.payload.imageSrc
       }
     },
 
-    adminLogin: (state, action) => { },
+    updatePageSel: (state, action) => {
+      return {
+        ...state,
+        pageSel: action.payload?.pageSel
+      }
+    },
+
+    updateAccessTokenExpire: (state, action) => {
+      return {
+        ...state,
+        accessTokenExpired: action.payload?.accessTokenExpired
+      }
+    },
+
+    updatePhoneNumber: (state, action) => {
+      return {
+        ...state,
+        phoneNumber: action.payload?.phoneNumber
+      }
+    },
+
+    updateAccessToken: (state, action) => { },
+    createProfile: (state, action) => { },
   },
   
 });

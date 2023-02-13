@@ -22,7 +22,7 @@ export const CalendarFilterModal = () => {
     <Modal
       open
       onClose={handleClose}
-      className="overflow-y-visible w-[500px] h-[571px]"
+      className="overflow-y-visible w-[500px] h-[591px]"
       mainModalClassName=" lg:flex hidden "
     >
         <CalendarFilter></CalendarFilter>      

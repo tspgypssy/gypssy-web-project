@@ -22,7 +22,7 @@ export const DestinationFilterModal = () => {
     <Modal
       open
       onClose={handleClose}
-      className="overflow-y-visible w-[500px] h-[588px]"
+      className="overflow-y-visible w-[500px] h-[648px]"
       mainModalClassName=" lg:flex hidden "
     >
         <DestinationFilters></DestinationFilters>      

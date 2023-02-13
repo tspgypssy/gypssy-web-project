@@ -8,7 +8,7 @@ import { AnyAction, bindActionCreators, Dispatch } from "redux";
 import {actions} from '../common/reducer';
 
 import {actions as loginactions} from '../modules/login/reducer';
-
+import {actions as useractions} from '../modules/user/reducer';
 import {actions as landingpageactions} from '../modules/landingpage/reducer';
 
 import store  from "./store";
@@ -17,7 +17,7 @@ export function setup (dispatch: Dispatch<AnyAction>) {
   const allActions = {
    
     ...loginactions,
-   
+    ...useractions,
     ...landingpageactions,
     ...actions
   };

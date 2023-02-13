@@ -5,11 +5,13 @@ import { combineReducers } from '@reduxjs/toolkit'
 import commonReducers from '../common/reducer';
 import loginReducers from '../modules/login/reducer';
 import landingPageReducers from '../modules/landingpage/reducer';
+import userReducers from '../modules/user/reducer';
 
 const appReducer = combineReducers({
   common: commonReducers,
   login:loginReducers,
   landingpage:landingPageReducers,
+  user:userReducers
 });
 
 export const rootReducer = (state: any, action: any) => {
