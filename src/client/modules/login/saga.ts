@@ -4,9 +4,13 @@ import { actions as commonAction } from "client/common/reducer";
 import { AnyAction } from "redux";
 
 interface ResponseGenerator {
- 
-  refresh_token?: string;
-  access_token?: string;
+  config?: any;
+  data?: any;
+  headers?: any;
+  request?: any;
+  status?: number;
+  statusText?: string;
+  json?: any;
 }
 
 interface VerfiyUserResponse {
@@ -38,8 +42,10 @@ export function* updateAccessToken(action: AnyAction) {
 
     else
     {
-      localStorage.setItem("jwt", response?.access_token);
-      localStorage.setItem("refreshJwt", response?.refresh_token);
+      const tokenRes = yield response.json();
+      localStorage.setItem("jwt", tokenRes?.access_token);
+      localStorage.setItem("refreshJwt", tokenRes?.refresh_token);
+      yield put(actions.reloadPage({reloadPage:true}));
     }
   } catch (e) {
     console.error(e);

@@ -6,7 +6,8 @@ const defaultState = {
    pageSel:"enter-mobile",
    image:null,
   imageSrc:null,
-  accessTokenExpired:false
+  accessTokenExpired:false,
+  reloadPage:false
 };
 
 
@@ -15,7 +16,13 @@ const commonReducer = createSlice({
   name: 'login',
   initialState: defaultState,
   reducers: {
-     
+    reloadPage: (state, action) => {
+      return {
+        ...state,
+        reloadPage: action.payload.reloadPage
+      
+      }
+    },
     updateSelectedImagePage: (state, action) => {
       return {
         ...state,

@@ -7,15 +7,17 @@ import { GalleryDetails } from './GalleryDetails';
 import { Trip } from './Trip';
 
 
-export const TripDetails = () => {
+export const TripDetails = ({trips}) => {
 
   return (
    
     <div className="  grid grid-cols-4 gap-4 mb-14">
-            <Trip></Trip>
-            <Trip></Trip>
-            <Trip></Trip>
-            <Trip></Trip>
+         {trips.length>0 && trips.map(( trip ) => (
+                           <>{
+                            <Trip trip={trip}></Trip>
+                            }</>
+                        ))}
+         
         </div> 
    
   );

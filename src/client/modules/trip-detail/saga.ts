@@ -1,6 +1,6 @@
 import { put, call } from "redux-saga/effects";
 import { actions } from "./reducer";
-import { actions as commonAction } from "client/common/reducer";
+import { actions as loginAction } from "client/modules/login/reducer";
 import { AnyAction } from "redux";
 
 interface ResponseGenerator {
@@ -29,6 +29,10 @@ export function* getTripDetails(action: AnyAction) {
     }
     ))
 
+    if(response?.status == 401)
+    {
+      yield put( loginAction.updateAccessTokenExpire({accessTokenExpired:true}));
+    }
     const tripDetails = yield response.json();
 
     yield put(actions.loadedTripDetails({ tripDetails }))
@@ -47,6 +51,12 @@ export function* getTripReviews(action: AnyAction) {
       headers: { 'Authorization': `Bearer ${localStorage.getItem('jwt')} `,}
     }
     ))
+
+    if(response?.status == 401)
+    {
+      yield put( loginAction.updateAccessTokenExpire({accessTokenExpired:true}));
+     
+    }
 
     const tripReviews = yield response.json();
 

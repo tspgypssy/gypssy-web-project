@@ -18,6 +18,7 @@ export const TripDetailsImage = () => {
   {
     return date.getDate() +" "+month[date.getMonth()]+"'"+date.getFullYear()
   }
+  
   const router = useRouter();
 
   const getFromToDate =() =>

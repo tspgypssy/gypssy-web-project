@@ -22,6 +22,7 @@ const Home = () => {
   const router = useRouter();
   const { modal } = router.query;
   const accessTokenExpired:string = useSelector((state: RootState) => state.login.accessTokenExpired);
+  const reloadPage:string = useSelector((state: RootState) => state.login.reloadPage);
 
   useEffect(() => {
    
@@ -30,6 +31,14 @@ const Home = () => {
       actionList.updateAccessToken({"grant_type":"refresh_token","refresh_token":localStorage.getItem("refreshJwt")});
     }
   }, [accessTokenExpired]);
+
+  useEffect(() => {
+   
+    if(reloadPage)
+    {
+      location.reload();
+    }
+  }, [reloadPage]);
 
 
   return (

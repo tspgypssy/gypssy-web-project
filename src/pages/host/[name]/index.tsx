@@ -2,8 +2,10 @@
 import { HostProfile } from "client/modules/host/components/HostProfile";
 import { TravellerProfile } from "client/modules/traveller/components/TravellerProfile";
 import { TripDetailsPage } from "client/modules/trip-detail/components/TripDetailsPage";
+import actionList from "client/shell/actions";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
  
 const NEXT_PUBLIC_WEB_BASE_URL = process.env.NEXT_PUBLIC_WEB_BASE_URL;
 
@@ -16,10 +18,19 @@ const TripDetail = () => {
     image: `${NEXT_PUBLIC_WEB_BASE_URL}/images/co-founder.png`,
   };
 
-
   const router = useRouter();
+
+  const { name } = router.query as {
+    name: string
+  };
+
   const { modal } = router.query;
 
+
+  useEffect(() => {
+    actionList.getHostDetails({name:name});
+   
+}, [router.query]);
 
   return (
     <>

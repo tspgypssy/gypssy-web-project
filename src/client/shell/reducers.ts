@@ -7,13 +7,15 @@ import loginReducers from '../modules/login/reducer';
 import landingPageReducers from '../modules/landingpage/reducer';
 import userReducers from '../modules/user/reducer';
 import tripDetailReducers from '../modules/trip-detail/reducer';
+import hostReducers from '../modules/host/reducer';
 
 const appReducer = combineReducers({
   common: commonReducers,
   login:loginReducers,
   landingpage:landingPageReducers,
   user:userReducers,
-  tripDetail:tripDetailReducers
+  tripDetail:tripDetailReducers,
+  host:hostReducers
 });
 
 export const rootReducer = (state: any, action: any) => {

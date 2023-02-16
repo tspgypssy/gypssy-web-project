@@ -8,10 +8,10 @@ import { TripleDot } from "icons/TripleDot";
 import { useCallback, useState } from "react";
 
 
-export const Trip = () => {
+export const Trip = ({trip}) => {
     
-  const imageUrl = '/images/dummy-trip.png';
   const optionsList = useState(["qq","aaq"]);
+  const month = ["Jan","Feb","March","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"];
 
   const [dropdownState, setDropdownState] = useState<"open" | "closed">(
    "closed"
@@ -20,12 +20,28 @@ export const Trip = () => {
    setDropdownState((old) => (old === "closed" ? "open" : "closed"));
  }, []);
 
+ const getCal =(date)=>
+  {
+    return date.getDate() +" "+month[date.getMonth()]+"'"+date.getFullYear()
+  }
+
+ const getFromToDate =() =>
+ {
+   if(trip?.fromDate && trip?.toDate)
+   {
+     const fromDate = new Date(trip?.fromDate);
+     const toDate = new Date(trip?.toDate);
+      return getCal(fromDate)+" - "+getCal(toDate); 
+   }
+  
+   return ""
+ }
 
   return (
     <div className="w-80">
         <div   className="h-80 w-80 rounded-xl bg-cover  ">
             <div className="relative">
-                <img   src={imageUrl} className="object-cover h-80 w-80 w-full rounded-lg " ></img> 
+                <img   src={trip?.coverImage} className="object-cover h-80 w-80 w-full rounded-lg " ></img> 
                 <div className="flex items-center absolute top-4 right-4">
                   <Share   className="cursor-pointer "></Share>
                   <div className="dropdown" onClick={toggle}>
@@ -58,33 +74,33 @@ export const Trip = () => {
                 
                 </div>
                 <div className="text-xs px-3 py-2 text-white rounded-tr-lg rounded-br-lg flex items-center absolute bottom-4 left-0 bg-black">
-                    <p>8 Days trip  </p>
+                    <p>{trip?.numberOfDays} Days trip  </p>
                     <StraightSmallLine className="mx-2"></StraightSmallLine>
-                    <p>25 Dec’22 - 1 Jan’23</p>
+                    <p>{getFromToDate()}</p>
                 </div> 
               </div>  
         </div>
         <div className="mt-4 w-80">
            <div className="flex items-center text-xs w-full font-semibold">
                 <p className="rounded px-3 py-2 bg-super-lighter-grey">
-                  All women’s trip
+                  {trip?.tripType}
                 </p>
                 <p className="ml-2 rounded px-3 py-2 bg-super-lighter-grey ">
-                   18+
+                 {trip?.fromAge} - {trip?.toAge}
                 </p>
                 <p className="ml-auto text-super-text-green px-[12px] py-[6px] border rounded-[100px] border-super-text-green light-green-bg light-green-bg ">
-                  2 slots left
+                  {trip?.totalSlots- trip?.slotsFilled} slots left
                 </p>
            </div>
         </div>
        
         <div>
-           <p className="mt-3 my-1 uppercase text-sm text-opacity-60">New Year in Europe</p>
-           <p className="mb-3 flex items-center text-xl font-bold">Azerbaijan</p>
+           <p className="mt-3 my-1 uppercase text-sm text-opacity-60">{trip?.title}</p>
+           <p className="mb-3 flex items-center text-xl font-bold">{trip?.destination}</p>
            
            <div className="mb-3 flex items-center">
               <p className="font-bold">₹ 1,46,000</p>
-              <p className="text-sm font-medium text-opacity-60 ml-2 line-through">₹1,60,000</p>
+              <p className="text-sm font-medium text-opacity-60 ml-2 line-through">{trip?.noDiscountPrice}</p>
            </div>
 
            {/* <div className="flex items-center text-sm">
