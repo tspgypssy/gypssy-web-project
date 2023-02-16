@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const defaultState = {
    accessToken:  "",
    phoneNumber:"",
-   pageSel:"create-profile",
+   pageSel:"enter-mobile",
    image:null,
   imageSrc:null,
   accessTokenExpired:false

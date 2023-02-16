@@ -1,5 +1,6 @@
 
 
+import { RootState } from 'client/shell/store';
 import { Favourite } from 'icons/Favourite';
 import { InstagramGrey } from 'icons/InstagramGrey';
 import { Line } from 'icons/Line';
@@ -7,12 +8,15 @@ import { ShareWhite } from 'icons/ShareWhite';
 import { StarGrey } from 'icons/StarGrey';
 import { YoutubeGrey } from 'icons/YoutubeGrey';
 import React, { useCallback, useRef } from 'react'
+import { useSelector } from 'react-redux';
 
 
 
 
 export const TripHostedBy = () => {
 
+  const tripDetail =useSelector((state: RootState) => state.tripDetail.tripDetails);
+ 
   return (
    
       <div className="w-full">

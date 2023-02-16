@@ -6,12 +6,14 @@ import commonReducers from '../common/reducer';
 import loginReducers from '../modules/login/reducer';
 import landingPageReducers from '../modules/landingpage/reducer';
 import userReducers from '../modules/user/reducer';
+import tripDetailReducers from '../modules/trip-detail/reducer';
 
 const appReducer = combineReducers({
   common: commonReducers,
   login:loginReducers,
   landingpage:landingPageReducers,
-  user:userReducers
+  user:userReducers,
+  tripDetail:tripDetailReducers
 });
 
 export const rootReducer = (state: any, action: any) => {

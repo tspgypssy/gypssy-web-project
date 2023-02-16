@@ -1,7 +1,10 @@
 
+import { ImagePreviewModal } from "client/modules/trip-detail/components/enter-trip-details/image-preview/ImagePreviewModal";
 import { TripDetailsPage } from "client/modules/trip-detail/components/TripDetailsPage";
+import actionList from "client/shell/actions";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
  
 const NEXT_PUBLIC_WEB_BASE_URL = process.env.NEXT_PUBLIC_WEB_BASE_URL;
 
@@ -16,8 +19,17 @@ const TripDetail = () => {
 
 
   const router = useRouter();
-  const { modal } = router.query;
+  
+  const { tripdetail } = router.query as {
+    tripdetail: string
+  };
 
+  const { modal } = router.query;
+  
+  useEffect(() => {
+      actionList.getTripDetails({tripdetail:tripdetail});
+     
+  }, [router.query]);
 
   return (
     <>
@@ -32,6 +44,7 @@ const TripDetail = () => {
       />
     
       <TripDetailsPage></TripDetailsPage>
+      { modal === 'image-preview' && <ImagePreviewModal /> }
     </>
    
   );

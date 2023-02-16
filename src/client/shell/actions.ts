@@ -10,6 +10,8 @@ import {actions} from '../common/reducer';
 import {actions as loginactions} from '../modules/login/reducer';
 import {actions as useractions} from '../modules/user/reducer';
 import {actions as landingpageactions} from '../modules/landingpage/reducer';
+import {actions as tripDetailpageactions} from '../modules/trip-detail/reducer';
+
 
 import store  from "./store";
 
@@ -19,6 +21,7 @@ export function setup (dispatch: Dispatch<AnyAction>) {
     ...loginactions,
     ...useractions,
     ...landingpageactions,
+    ...tripDetailpageactions,
     ...actions
   };
 

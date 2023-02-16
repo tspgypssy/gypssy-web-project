@@ -1,10 +1,12 @@
-import { Footer } from 'client/modules/header/components/Footer';
+
 import { Header } from 'client/modules/header/components/Header';
-import { CrossModal } from 'icons/CrossModal';
+import actionList from 'client/shell/actions';
 import { useRouter } from 'next/router';
-import React, { useCallback, useRef } from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import { ConfirmTripDetails } from './confirm-trip-details/ConfirmTripDetails';
 import { TripDetails } from './enter-trip-details/TripDetails';
+
+
 
 
 

@@ -1,5 +1,6 @@
 
 
+import { RootState } from 'client/shell/store';
 import { Favourite } from 'icons/Favourite';
 import { GreyDot } from 'icons/GreyDot';
 import { InstagramGrey } from 'icons/InstagramGrey';
@@ -10,12 +11,15 @@ import { StarBigger } from 'icons/StarBigger';
 import { StarGrey } from 'icons/StarGrey';
 import { YoutubeGrey } from 'icons/YoutubeGrey';
 import React, { useCallback, useRef } from 'react'
+import { useSelector } from 'react-redux';
 
 
 
 
 export const TripReviewSection = () => {
 
+ // const tripReviews =useSelector((state: RootState) => state.tripDetail.tripReviews);
+ 
   return (
    
       <div className="w-full">

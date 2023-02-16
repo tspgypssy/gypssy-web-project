@@ -59,11 +59,11 @@ export const LoginPage = () => {
    
     <div  className="  ">
        
-        {/* {pageSel=="enter-mobile" && <EnterMobileNumber loginSubmit={loginSubmit}></EnterMobileNumber> }
+        {pageSel=="enter-mobile" && <EnterMobileNumber loginSubmit={loginSubmit}></EnterMobileNumber> }
         {pageSel=="enter-otp" &&  <EnterOTPNumber resubmitPhoeNumber={loginSubmit}></EnterOTPNumber>}
-        {pageSel=="create-profile" &&  <CreateProfile></CreateProfile>} */}
+        {pageSel=="create-profile" &&  <CreateProfile></CreateProfile>}
 
-<CreateProfile></CreateProfile>
+        {/* <CreateProfile></CreateProfile> */}
         
         <button className="" id="sign-in-button" ></button>
     </div>

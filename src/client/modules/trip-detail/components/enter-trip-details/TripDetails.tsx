@@ -1,10 +1,5 @@
 
 import { Footer } from 'client/modules/header/components/Footer';
-import { Favourite } from 'icons/Favourite';
-import { Middot } from 'icons/Middot';
-import { MiddotWhite } from 'icons/MiddotWhite';
-import { Share } from 'icons/Share';
-import { ShareWhite } from 'icons/ShareWhite';
 import React, { useCallback, useRef } from 'react'
 import { TripDetailsHeader } from './TripDetailsHeader';
 import { TripDetailsImage } from './TripDetailsImage';

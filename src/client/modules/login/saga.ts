@@ -49,7 +49,7 @@ export function* updateAccessToken(action: AnyAction) {
 export function* createProfile(action: AnyAction) {
   try {
 
-    const response2: ResponseGenerator = yield call(() => fetch("https://c0d6-2405-201-d015-1016-19f6-ecc9-92a4-4647.in.ngrok.io/api/v1/profile/user",
+    const response2: ResponseGenerator = yield call(() => fetch("https://bold-club.el.r.appspot.com/api/v1/profile/user",
     {
       headers: { 'Authorization': `Bearer ${localStorage.getItem("jwt")}`,}
     }

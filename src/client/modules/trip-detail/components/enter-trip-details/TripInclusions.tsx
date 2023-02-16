@@ -1,16 +1,19 @@
 
 
+import { RootState } from 'client/shell/store';
 import { LandingPageMinus } from 'icons/LandingPageMinus';
 import { LandingPagePlus } from 'icons/LandingPagePlus';
 import { Line } from 'icons/Line';
 import React, { useCallback, useRef, useState } from 'react'
+import { useSelector } from 'react-redux';
 
 
 
 export const TripInclusions = () => {
 
   const [secOpened,setSecOpened] = useState(false);
- 
+  const tripDetail =useSelector((state: RootState) => state.tripDetail.tripDetails);
+
   const toggleDiv =()=>
   {
     setSecOpened(!secOpened);
@@ -34,10 +37,9 @@ export const TripInclusions = () => {
             <div className="font-semibold text-2xl ">Inclusions</div>
             <div className="mt-6 ">
                 <ul className="list-disc ml-6 font-medium opacity-60">
-                   <li className="mt-3">Accommodation: 2x nights in Baku 2x nights in Sheki 1x nights in Ganja 2x nights in
-Baku</li>
-                    <li className="mt-3">Air-conditioned vehicle</li>
-                    <li className="mt-3">Dance folk show on dinner in Sheki</li>
+                    {tripDetail?.inclusions.length>0 && tripDetail?.inclusions.map((item,index) => (
+                        <li className="mt-3">{item}</li>
+                  ))}
                 </ul>
             </div>
           </div>
