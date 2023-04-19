@@ -12,7 +12,7 @@ import {actions as useractions} from '../modules/user/reducer';
 import {actions as landingpageactions} from '../modules/landingpage/reducer';
 import {actions as tripDetailpageactions} from '../modules/trip-detail/reducer';
 import {actions as hostpageactions} from '../modules/host/reducer';
-
+import {actions as createtrippageactions} from '../modules/create-trip/reducer';
 
 import store  from "./store";
 
@@ -24,6 +24,7 @@ export function setup (dispatch: Dispatch<AnyAction>) {
     ...landingpageactions,
     ...tripDetailpageactions,
     ...hostpageactions,
+    ...createtrippageactions,
     ...actions
   };
 

@@ -1,19 +1,23 @@
+import actionList from "client/shell/actions";
 
-import { CalendarIcon } from 'icons/CalendarIcon';
-import { DownArrow } from 'icons/DownArrow';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
 
 export const PlanItenary = () => {
     
-  const router = useRouter();
-  const [value,onChange] = useState(new Date());
-  const [showCal,setShowCal] = useState(false); 
+
+  const moveToNextPage =()=>
+   {
+    actionList.updateCreateTripPageSelected({"pageTypeSelected":"plan-itenary"})
+   }
+ 
+   const moveToPrevPage =()=>
+   {
+    actionList.updateCreateTripPageSelected({"pageTypeSelected":"enter-trip-details"})
+   }
 
   return (
-   <div onClick={()=>(setShowCal(false))} className="w-full h-screen bg-white overflow-y-auto px-36 ">
+   <div className="w-full h-screen bg-white overflow-y-auto  ">
+   
+   <div className=" px-36  createTripTitleDesc overflow-y-auto">
        <p className="text-4xl font-bold my-6">Let’s plan itinerary</p>
 
       <div className="px-4 py-3 w-1/2 flex items-center bg-super-bg-light-white rounded-lg">
@@ -59,7 +63,14 @@ export const PlanItenary = () => {
                 </div>                                                        
       </div>
 
+      </div>
 
+      <div className="w-full px-10 border-t border-[#EBEBEB]  z-[60]    overflow-x-hidden overflow-y-auto  ">
+          <div className=" w-full flex items-center">
+          <p onClick={moveToPrevPage} className="font-semibold underline cursor-pointer ">Back</p>
+           <button onClick={moveToNextPage} className="cursor-pointer ml-auto rounded-[100px] text-white bg-black px-8 py-3  mt-3">Continue</button>
+          </div>
+        </div> 
    </div>
   );
 };

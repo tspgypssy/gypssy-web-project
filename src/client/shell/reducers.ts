@@ -8,6 +8,7 @@ import landingPageReducers from '../modules/landingpage/reducer';
 import userReducers from '../modules/user/reducer';
 import tripDetailReducers from '../modules/trip-detail/reducer';
 import hostReducers from '../modules/host/reducer';
+import createtripReducers from '../modules/create-trip/reducer';
 
 const appReducer = combineReducers({
   common: commonReducers,
@@ -15,7 +16,8 @@ const appReducer = combineReducers({
   landingpage:landingPageReducers,
   user:userReducers,
   tripDetail:tripDetailReducers,
-  host:hostReducers
+  host:hostReducers,
+  createtrip:createtripReducers
 });
 
 export const rootReducer = (state: any, action: any) => {

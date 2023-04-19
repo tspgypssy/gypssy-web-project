@@ -79,18 +79,18 @@ export const CreateProfile = () => {
 
   const createProfile = () =>
   {
-      //if(!disableContinue())
+      if(!disableContinue())
       {
-      //  actionList.createProfile({"avatar":imageUploadURL,"dob":age.toISOString(),"email":email,"gender":gender,"name":name,"phoneNo":phoneNumberSet})
-        let dummy={
-          "avatar": "https://firebasestorage.googleapis.com/v0/b/bold-club.appspot.com/o/users%2Favatars%2FtcN9hrAu0mRzyOPctHWGNqTbpCc2?alt=media&token=f1007824-25e9-4ae6-a308-83d2b9e60599",
-          "dob": "1992-11-18T18:30:00.000+00:00",
-          "email": "tanmaygarg92@gmail.com",
-          "gender": "Male",
-          "name": "Tanmay Garg",
-          "phoneNo": "9381097977"
-      }
-      actionList.createProfile(dummy);
+       actionList.createProfile({"avatar":imageUploadURL,"dob":age.toISOString(),"email":email,"gender":gender,"name":name,"phoneNo":phoneNumberSet})
+      //   let dummy={
+      //     "avatar": "https://firebasestorage.googleapis.com/v0/b/bold-club.appspot.com/o/users%2Favatars%2FtcN9hrAu0mRzyOPctHWGNqTbpCc2?alt=media&token=f1007824-25e9-4ae6-a308-83d2b9e60599",
+      //     "dob": "1992-11-18T18:30:00.000+00:00",
+      //     "email": "tanmaygarg92@gmail.com",
+      //     "gender": "Male",
+      //     "name": "Tanmay Garg",
+      //     "phoneNo": "9381097977"
+      // }
+      // actionList.createProfile(dummy);
       //  handleClose();
       }
   }

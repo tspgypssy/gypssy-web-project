@@ -4,12 +4,13 @@ import landingPageFormSagas from '../modules/landingpage/saga';
 import userFormSagas from '../modules/user/saga';
 import tripDetailFormSagas from '../modules/trip-detail/saga';
 import hostFormSagas from '../modules/host/saga';
-
+import createtripFormSagas from '../modules/create-trip/saga';
 export default [
   ...commonSagas,
  ...loginFormSagas,
  ...landingPageFormSagas,
  ...userFormSagas,
  ...tripDetailFormSagas,
- ...hostFormSagas
+ ...hostFormSagas,
+ ...createtripFormSagas
 ];

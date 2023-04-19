@@ -18,8 +18,8 @@ export const ManageTrip = () => {
    
     <div  className="bg-white  ">
           <Header></Header>
-          {/* <HostDetails></HostDetails> */}
-          <TravellerDetails></TravellerDetails>
+          <HostDetails></HostDetails>
+          {/* <TravellerDetails></TravellerDetails> */}
           <Footer></Footer>
 
         
